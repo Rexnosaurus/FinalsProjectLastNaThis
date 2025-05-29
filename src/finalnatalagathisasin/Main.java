@@ -25,8 +25,8 @@ public class Main extends javax.swing.JFrame {
     int givenFields;
     private List<String> variableNames = new ArrayList<>();
     
-    
     Font defaultFont = new Font("Helvetica Neue", Font.PLAIN, 36);
+    
     DecimalFormat decimalFormat = new DecimalFormat("#.00");
     
     ShapesFormula sf = new ShapesFormula();
@@ -65,6 +65,7 @@ public class Main extends javax.swing.JFrame {
     public void clearAnswer(){
         lblAnswer.setText("Selected Shape Answer");
     }
+    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -89,8 +90,8 @@ public class Main extends javax.swing.JFrame {
         btnCalculate = new javax.swing.JButton();
         btnClear = new javax.swing.JButton();
         tabbedPaneShapeSelection = new javax.swing.JTabbedPane();
-        jScrollPane3 = new javax.swing.JScrollPane();
-        jPanel3 = new javax.swing.JPanel();
+        scrollPane2dShapes = new javax.swing.JScrollPane();
+        panel2dShapes = new javax.swing.JPanel();
         btnCircle = new javax.swing.JButton();
         btnEllipse = new javax.swing.JButton();
         btnTriangle = new javax.swing.JButton();
@@ -101,8 +102,12 @@ public class Main extends javax.swing.JFrame {
         btnHexagon = new javax.swing.JButton();
         btnHeptagon = new javax.swing.JButton();
         btnOctagon = new javax.swing.JButton();
-        jScrollPane4 = new javax.swing.JScrollPane();
-        jPanel4 = new javax.swing.JPanel();
+        btnNonagon = new javax.swing.JButton();
+        btnDecagon = new javax.swing.JButton();
+        btnRhombus = new javax.swing.JButton();
+        btnTrapezoid = new javax.swing.JButton();
+        scrollPane3dShapes = new javax.swing.JScrollPane();
+        panel3dShapes = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -308,47 +313,87 @@ public class Main extends javax.swing.JFrame {
             }
         });
 
-        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
-        jPanel3.setLayout(jPanel3Layout);
-        jPanel3Layout.setHorizontalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel3Layout.createSequentialGroup()
+        btnNonagon.setText("Nonagon");
+        btnNonagon.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnNonagonActionPerformed(evt);
+            }
+        });
+
+        btnDecagon.setText("Decagon");
+        btnDecagon.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnDecagonActionPerformed(evt);
+            }
+        });
+
+        btnRhombus.setText("Rhombus");
+        btnRhombus.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnRhombusActionPerformed(evt);
+            }
+        });
+
+        btnTrapezoid.setText("Trapezoid");
+        btnTrapezoid.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnTrapezoidActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout panel2dShapesLayout = new javax.swing.GroupLayout(panel2dShapes);
+        panel2dShapes.setLayout(panel2dShapesLayout);
+        panel2dShapesLayout.setHorizontalGroup(
+            panel2dShapesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panel2dShapesLayout.createSequentialGroup()
+                .addGroup(panel2dShapesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(panel2dShapesLayout.createSequentialGroup()
                         .addGap(6, 6, 6)
                         .addComponent(btnCircle, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel3Layout.createSequentialGroup()
+                    .addGroup(panel2dShapesLayout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(btnEllipse, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel3Layout.createSequentialGroup()
+                    .addGroup(panel2dShapesLayout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(btnTriangle, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel3Layout.createSequentialGroup()
+                    .addGroup(panel2dShapesLayout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(btnRectangle, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel3Layout.createSequentialGroup()
+                    .addGroup(panel2dShapesLayout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(btnSquare, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel3Layout.createSequentialGroup()
+                    .addGroup(panel2dShapesLayout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(btnParallelogram, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel3Layout.createSequentialGroup()
+                    .addGroup(panel2dShapesLayout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(btnPentagon, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel3Layout.createSequentialGroup()
+                    .addGroup(panel2dShapesLayout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(btnHexagon, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel3Layout.createSequentialGroup()
+                    .addGroup(panel2dShapesLayout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(btnHeptagon, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel3Layout.createSequentialGroup()
+                    .addGroup(panel2dShapesLayout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(btnOctagon, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(btnOctagon, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(panel2dShapesLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(btnNonagon, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(panel2dShapesLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(btnDecagon, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(panel2dShapesLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(btnRhombus, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(panel2dShapesLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(btnTrapezoid, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(22, 22, 22))
         );
-        jPanel3Layout.setVerticalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
+        panel2dShapesLayout.setVerticalGroup(
+            panel2dShapesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panel2dShapesLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(btnCircle, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -369,27 +414,35 @@ public class Main extends javax.swing.JFrame {
                 .addComponent(btnHeptagon, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(btnOctagon, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(84, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btnNonagon, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btnDecagon, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btnRhombus, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btnTrapezoid, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(70, Short.MAX_VALUE))
         );
 
-        jScrollPane3.setViewportView(jPanel3);
+        scrollPane2dShapes.setViewportView(panel2dShapes);
 
-        tabbedPaneShapeSelection.addTab("2D Shapes", jScrollPane3);
+        tabbedPaneShapeSelection.addTab("2D Shapes", scrollPane2dShapes);
 
-        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
-        jPanel4.setLayout(jPanel4Layout);
-        jPanel4Layout.setHorizontalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        javax.swing.GroupLayout panel3dShapesLayout = new javax.swing.GroupLayout(panel3dShapes);
+        panel3dShapes.setLayout(panel3dShapesLayout);
+        panel3dShapesLayout.setHorizontalGroup(
+            panel3dShapesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 214, Short.MAX_VALUE)
         );
-        jPanel4Layout.setVerticalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        panel3dShapesLayout.setVerticalGroup(
+            panel3dShapesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 529, Short.MAX_VALUE)
         );
 
-        jScrollPane4.setViewportView(jPanel4);
+        scrollPane3dShapes.setViewportView(panel3dShapes);
 
-        tabbedPaneShapeSelection.addTab("3D Shapes", jScrollPane4);
+        tabbedPaneShapeSelection.addTab("3D Shapes", scrollPane3dShapes);
 
         mainPanel.add(tabbedPaneShapeSelection);
         tabbedPaneShapeSelection.setBounds(0, 150, 220, 570);
@@ -525,7 +578,7 @@ public class Main extends javax.swing.JFrame {
         givenFields = 1;
         
         lblSelectedShapeName.setText("Hexagon");
-        lblSelectedShapeFormula.setText(sf.pentagon());
+        lblSelectedShapeFormula.setText(sf.hexagon());
         
         variableNames.clear();
         variableNames.add("Given side");
@@ -539,7 +592,7 @@ public class Main extends javax.swing.JFrame {
         givenFields = 1;
         
         lblSelectedShapeName.setText("Heptagon");
-        lblSelectedShapeFormula.setText(sf.pentagon());
+        lblSelectedShapeFormula.setText(sf.heptagon());
         
         variableNames.clear();
         variableNames.add("Given side");
@@ -553,17 +606,58 @@ public class Main extends javax.swing.JFrame {
         givenFields = 1;
         
         lblSelectedShapeName.setText("Octagon");
-        lblSelectedShapeFormula.setText(sf.pentagon());
+        lblSelectedShapeFormula.setText(sf.octagon());
         
         variableNames.clear();
         variableNames.add("Given side");
         
         textFieldsHandler();
         clearAnswer();           
-    }                                              
+    }                      
+    
+    private void btnNonagonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNonagonActionPerformed
+        // TODO add your handling code here:
+        givenFields = 1;
+        
+        lblSelectedShapeName.setText("Nonagon");
+        lblSelectedShapeFormula.setText(sf.nonagon());
+        
+        variableNames.clear();
+        variableNames.add("Given side");
+        
+        textFieldsHandler();
+        clearAnswer();             
+    }//GEN-LAST:event_btnNonagonActionPerformed
+
+    private void btnDecagonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDecagonActionPerformed
+        // TODO add your handling code here:
+        givenFields = 1;
+        
+        lblSelectedShapeName.setText("Decagon");
+        lblSelectedShapeFormula.setText(sf.decagon());
+        
+        variableNames.clear();
+        variableNames.add("Given side");
+        
+        textFieldsHandler();
+        clearAnswer();             
+    }//GEN-LAST:event_btnDecagonActionPerformed
+
+    private void btnRhombusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRhombusActionPerformed
+        // TODO add your handling code here:
+        
+    }//GEN-LAST:event_btnRhombusActionPerformed
+
+    private void btnTrapezoidActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTrapezoidActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnTrapezoidActionPerformed
+
 
     private void btnCalculateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCalculateActionPerformed
         // TODO add your handling code here:
+        
+        //Circle
+        
         if ("Circle".equals(lblSelectedShapeName.getText())) {
             try {
                 //For Rounding: https://stackoverflow.com/questions/2808535/round-a-double-to-2-decimal-places
@@ -580,7 +674,11 @@ public class Main extends javax.swing.JFrame {
                 lblAnswer.setText("Invalid radius. Please enter a number.");
                 }
             
-        } else if ("Ellipse".equals(lblSelectedShapeName.getText())) {
+        }
+        
+        //Ellipse
+        
+        else if ("Ellipse".equals(lblSelectedShapeName.getText())) {
             try {
                 double a = Double.parseDouble(textFields.get(0).getText());
                 double b = Double.parseDouble(textFields.get(1).getText());
@@ -592,7 +690,11 @@ public class Main extends javax.swing.JFrame {
             } catch (NumberFormatException ex) {
                 lblAnswer.setText("Invalid radius. Please enter a number.");
             }
-        } else if ("Triangle".equals(lblSelectedShapeName.getText())) {
+        }
+        
+        //Triangle
+        
+        else if ("Triangle".equals(lblSelectedShapeName.getText())) {
             try {
                 double a = Double.parseDouble(textFields.get(0).getText());
                 double b = Double.parseDouble(textFields.get(1).getText());
@@ -607,7 +709,11 @@ public class Main extends javax.swing.JFrame {
             } catch (NumberFormatException ex) {
                 lblAnswer.setText("Invalid radius. Please enter a number.");
             }            
-        } else if ("Square".equals(lblSelectedShapeName.getText())) {
+        }
+        
+        //Square
+        
+        else if ("Square".equals(lblSelectedShapeName.getText())) {
             try {
                 double a = Double.parseDouble(textFields.get(0).getText());
                 
@@ -619,7 +725,11 @@ public class Main extends javax.swing.JFrame {
             } catch (NumberFormatException ex) {
                 lblAnswer.setText("Invalid radius. Please enter a number.");
             }
-        } else if ("Rectangle".equals(lblSelectedShapeName.getText())) {
+        }
+        
+        //Rectangle
+        
+        else if ("Rectangle".equals(lblSelectedShapeName.getText())) {
             try {
                 double length = Double.parseDouble(textFields.get(0).getText());
                 double width = Double.parseDouble(textFields.get(1).getText());
@@ -632,7 +742,11 @@ public class Main extends javax.swing.JFrame {
             } catch (NumberFormatException ex) {
                 lblAnswer.setText("Invalid radius. Please enter a number.");
             }
-        } else if ("Parallelogram".equals(lblSelectedShapeName.getText())) {
+        }
+        
+        //Parallelogram
+        
+        else if ("Parallelogram".equals(lblSelectedShapeName.getText())) {
             try {
                 double base = Double.parseDouble(textFields.get(0).getText());
                 double side = Double.parseDouble(textFields.get(1).getText());
@@ -647,22 +761,11 @@ public class Main extends javax.swing.JFrame {
             } catch (NumberFormatException ex) {
                 lblAnswer.setText("Invalid radius. Please enter a number.");
             } 
-        } else if ("Parallelogram".equals(lblSelectedShapeName.getText())) {
-            try {
-                double base = Double.parseDouble(textFields.get(0).getText());
-                double side = Double.parseDouble(textFields.get(1).getText());
-                double height = Double.parseDouble(textFields.get(2).getText());
-                
-                
-                double perimeter = 2 * (base + side);
-                double area = base * height;
-
-                lblAnswer.setText("<html>Perimeter = " + decimalFormat.format(perimeter) +
-                "<br>Area = " + decimalFormat.format(area) + "</html>");
-            } catch (NumberFormatException ex) {
-                lblAnswer.setText("Invalid radius. Please enter a number.");
-            } 
-        } else if ("Pentagon".equals(lblSelectedShapeName.getText())) {
+        }
+        
+        //Pentagon
+        
+        else if ("Pentagon".equals(lblSelectedShapeName.getText())) {
             try {
                 double side = Double.parseDouble(textFields.get(0).getText());
                 
@@ -674,7 +777,11 @@ public class Main extends javax.swing.JFrame {
             } catch (NumberFormatException ex) {
                 lblAnswer.setText("Invalid radius. Please enter a number.");
             } 
-        } else if ("Hexagon".equals(lblSelectedShapeName.getText())) {
+        }
+        
+        //Hexagon
+        
+        else if ("Hexagon".equals(lblSelectedShapeName.getText())) {
             try {
                 double side = Double.parseDouble(textFields.get(0).getText());
                 
@@ -687,7 +794,11 @@ public class Main extends javax.swing.JFrame {
             } catch (NumberFormatException ex) {
                 lblAnswer.setText("Invalid radius. Please enter a number.");
             } 
-        } else if ("Heptagon".equals(lblSelectedShapeName.getText())) {
+        }
+        
+        //Heptagon
+        
+        else if ("Heptagon".equals(lblSelectedShapeName.getText())) {
             try {
                 double side = Double.parseDouble(textFields.get(0).getText());
                 
@@ -700,7 +811,11 @@ public class Main extends javax.swing.JFrame {
             } catch (NumberFormatException ex) {
                 lblAnswer.setText("Invalid radius. Please enter a number.");
             } 
-        } else if ("Octagon".equals(lblSelectedShapeName.getText())) {
+        }
+        
+        //Octagon
+        
+        else if ("Octagon".equals(lblSelectedShapeName.getText())) {
             try {
                 double side = Double.parseDouble(textFields.get(0).getText());
                 
@@ -713,7 +828,43 @@ public class Main extends javax.swing.JFrame {
             } catch (NumberFormatException ex) {
                 lblAnswer.setText("Invalid radius. Please enter a number.");
             } 
-        } 
+        }
+        
+        //Nonagon
+        
+        else if ("Nonagon".equals(lblSelectedShapeName.getText())) {
+            try {
+                double side = Double.parseDouble(textFields.get(0).getText());
+                
+                
+                double perimeter = 9 * side;
+                double area = (9 * Math.pow(side, 2)) / (4 * Math.tan(Math.PI/9));
+
+                lblAnswer.setText("<html>Perimeter = " + decimalFormat.format(perimeter) +
+                "<br>Area = " + decimalFormat.format(area) + "</html>");
+            } catch (NumberFormatException ex) {
+                lblAnswer.setText("Invalid radius. Please enter a number.");
+            } 
+        }
+        
+        //Decagon
+        
+        else if ("Decagon".equals(lblSelectedShapeName.getText())) {
+            try {
+                double side = Double.parseDouble(textFields.get(0).getText());
+                
+                
+                double perimeter = 10 * side;
+                double area = (5 * Math.pow(side, 2)) / (2 * Math.tan(Math.PI/10));
+
+                lblAnswer.setText("<html>Perimeter = " + decimalFormat.format(perimeter) +
+                "<br>Area = " + decimalFormat.format(area) + "</html>");
+            } catch (NumberFormatException ex) {
+                lblAnswer.setText("Invalid radius. Please enter a number.");
+            } 
+        }
+        
+        
 
     }//GEN-LAST:event_btnCalculateActionPerformed
 
@@ -722,6 +873,9 @@ public class Main extends javax.swing.JFrame {
         textFieldsHandler();
         lblAnswer.setText("Selected Shape Answer");
     }//GEN-LAST:event_btnClearActionPerformed
+
+
+
 
 
     /**
@@ -763,23 +917,25 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JButton btnCalculate;
     private javax.swing.JButton btnCircle;
     private javax.swing.JButton btnClear;
+    private javax.swing.JButton btnDecagon;
     private javax.swing.JButton btnEllipse;
     private javax.swing.JButton btnHeptagon;
     private javax.swing.JButton btnHexagon;
+    private javax.swing.JButton btnNonagon;
     private javax.swing.JButton btnOctagon;
     private javax.swing.JButton btnParallelogram;
     private javax.swing.JButton btnPentagon;
     private javax.swing.JButton btnRectangle;
+    private javax.swing.JButton btnRhombus;
     private javax.swing.JButton btnSquare;
+    private javax.swing.JButton btnTrapezoid;
     private javax.swing.JButton btnTriangle;
-    private javax.swing.JPanel jPanel3;
-    private javax.swing.JPanel jPanel4;
-    private javax.swing.JScrollPane jScrollPane3;
-    private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JLabel lblAnswer;
     private javax.swing.JLabel lblSelectedShapeFormula;
     private javax.swing.JLabel lblSelectedShapeName;
     private javax.swing.JPanel mainPanel;
+    private javax.swing.JPanel panel2dShapes;
+    private javax.swing.JPanel panel3dShapes;
     private javax.swing.JPanel panelSelectedShapeAnswer;
     private javax.swing.JPanel panelSelectedShapeFormula;
     private javax.swing.JPanel panelSelectedShapeInputs;
@@ -787,6 +943,8 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JPanel panelShapeName;
     private javax.swing.JPanel panelTextFields;
     private javax.swing.JPanel panelTitle;
+    private javax.swing.JScrollPane scrollPane2dShapes;
+    private javax.swing.JScrollPane scrollPane3dShapes;
     private javax.swing.JTabbedPane tabbedPaneShapeSelection;
     // End of variables declaration//GEN-END:variables
 }
