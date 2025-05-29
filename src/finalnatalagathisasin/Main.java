@@ -22,7 +22,7 @@ public class Main extends javax.swing.JFrame {
      * Creates new form Main
      */
     private List<JTextField> textFields = new ArrayList<>();
-    int givenFields = 99;
+    int givenFields;
     private List<String> variableNames = new ArrayList<>();
     
     
@@ -96,6 +96,7 @@ public class Main extends javax.swing.JFrame {
         btnTriangle = new javax.swing.JButton();
         btnRectangle = new javax.swing.JButton();
         btnSquare = new javax.swing.JButton();
+        btnRectangle1 = new javax.swing.JButton();
         jScrollPane4 = new javax.swing.JScrollPane();
         jPanel4 = new javax.swing.JPanel();
 
@@ -188,7 +189,7 @@ public class Main extends javax.swing.JFrame {
         panelSelectedShapeInputs.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         panelTextFields.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        panelTextFields.setLayout(new java.awt.GridLayout());
+        panelTextFields.setLayout(new java.awt.GridLayout(1, 0));
 
         btnCalculate.setText("Calculate");
         btnCalculate.addActionListener(new java.awt.event.ActionListener() {
@@ -268,6 +269,13 @@ public class Main extends javax.swing.JFrame {
             }
         });
 
+        btnRectangle1.setText("Rectangle");
+        btnRectangle1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnRectangle1ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
@@ -287,6 +295,9 @@ public class Main extends javax.swing.JFrame {
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(btnSquare, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(btnRectangle1, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -301,7 +312,9 @@ public class Main extends javax.swing.JFrame {
                 .addComponent(btnSquare, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(btnRectangle, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(231, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btnRectangle1, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(134, Short.MAX_VALUE))
         );
 
         jScrollPane3.setViewportView(jPanel3);
@@ -421,6 +434,10 @@ public class Main extends javax.swing.JFrame {
         clearAnswer();
     }//GEN-LAST:event_btnSquareActionPerformed
 
+    private void btnRectangle1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRectangle1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnRectangle1ActionPerformed
+
     private void btnCalculateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCalculateActionPerformed
         // TODO add your handling code here:
         if ("Circle".equals(lblSelectedShapeName.getText())) {
@@ -501,6 +518,7 @@ public class Main extends javax.swing.JFrame {
         lblAnswer.setText("Selected Shape Answer");
     }//GEN-LAST:event_btnClearActionPerformed
 
+
     /**
      * @param args the command line arguments
      */
@@ -542,6 +560,7 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JButton btnClear;
     private javax.swing.JButton btnEllipse;
     private javax.swing.JButton btnRectangle;
+    private javax.swing.JButton btnRectangle1;
     private javax.swing.JButton btnSquare;
     private javax.swing.JButton btnTriangle;
     private javax.swing.JPanel jPanel3;
