@@ -96,7 +96,11 @@ public class Main extends javax.swing.JFrame {
         btnTriangle = new javax.swing.JButton();
         btnRectangle = new javax.swing.JButton();
         btnSquare = new javax.swing.JButton();
-        btnRectangle1 = new javax.swing.JButton();
+        btnParallelogram = new javax.swing.JButton();
+        btnPentagon = new javax.swing.JButton();
+        btnHexagon = new javax.swing.JButton();
+        btnHeptagon = new javax.swing.JButton();
+        btnOctagon = new javax.swing.JButton();
         jScrollPane4 = new javax.swing.JScrollPane();
         jPanel4 = new javax.swing.JPanel();
 
@@ -269,10 +273,38 @@ public class Main extends javax.swing.JFrame {
             }
         });
 
-        btnRectangle1.setText("Rectangle");
-        btnRectangle1.addActionListener(new java.awt.event.ActionListener() {
+        btnParallelogram.setText("Parallelogram");
+        btnParallelogram.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnRectangle1ActionPerformed(evt);
+                btnParallelogramActionPerformed(evt);
+            }
+        });
+
+        btnPentagon.setText("Pentagon");
+        btnPentagon.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnPentagonActionPerformed(evt);
+            }
+        });
+
+        btnHexagon.setText("Hexagon");
+        btnHexagon.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnHexagonActionPerformed(evt);
+            }
+        });
+
+        btnHeptagon.setText("Heptagon");
+        btnHeptagon.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnHeptagonActionPerformed(evt);
+            }
+        });
+
+        btnOctagon.setText("Octagon");
+        btnOctagon.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnOctagonActionPerformed(evt);
             }
         });
 
@@ -281,23 +313,38 @@ public class Main extends javax.swing.JFrame {
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
-                .addGap(6, 6, 6)
-                .addComponent(btnCircle, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(btnEllipse, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(btnTriangle, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(btnRectangle, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(btnSquare, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(btnRectangle1, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addGap(6, 6, 6)
+                        .addComponent(btnCircle, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(btnEllipse, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(btnTriangle, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(btnRectangle, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(btnSquare, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(btnParallelogram, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(btnPentagon, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(btnHexagon, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(btnHeptagon, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(btnOctagon, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(22, 22, 22))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -313,8 +360,16 @@ public class Main extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(btnRectangle, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(btnRectangle1, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(134, Short.MAX_VALUE))
+                .addComponent(btnParallelogram, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btnPentagon, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btnHexagon, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btnHeptagon, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btnOctagon, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(84, Short.MAX_VALUE))
         );
 
         jScrollPane3.setViewportView(jPanel3);
@@ -434,9 +489,78 @@ public class Main extends javax.swing.JFrame {
         clearAnswer();
     }//GEN-LAST:event_btnSquareActionPerformed
 
-    private void btnRectangle1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRectangle1ActionPerformed
+    private void btnParallelogramActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnParallelogramActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_btnRectangle1ActionPerformed
+        
+        givenFields = 3;
+        
+        lblSelectedShapeName.setText("Parallelogram");
+        lblSelectedShapeFormula.setText(sf.parallelogram());
+        
+        variableNames.clear();
+        variableNames.add("Given base");
+        variableNames.add("Given side");
+        variableNames.add("Given height");
+        
+        textFieldsHandler();
+        clearAnswer();        
+    }//GEN-LAST:event_btnParallelogramActionPerformed
+
+    private void btnPentagonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPentagonActionPerformed
+        // TODO add your handling code here:
+        givenFields = 1;
+        
+        lblSelectedShapeName.setText("Pentagon");
+        lblSelectedShapeFormula.setText(sf.pentagon());
+        
+        variableNames.clear();
+        variableNames.add("Given side");
+        
+        textFieldsHandler();
+        clearAnswer();                
+    }//GEN-LAST:event_btnPentagonActionPerformed
+
+    private void btnHexagonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnHexagonActionPerformed
+        // TODO add your handling code here:
+        givenFields = 1;
+        
+        lblSelectedShapeName.setText("Hexagon");
+        lblSelectedShapeFormula.setText(sf.pentagon());
+        
+        variableNames.clear();
+        variableNames.add("Given side");
+        
+        textFieldsHandler();
+        clearAnswer();           
+    }//GEN-LAST:event_btnHexagonActionPerformed
+
+    private void btnHeptagonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnHeptagonActionPerformed
+        // TODO add your handling code here:
+        givenFields = 1;
+        
+        lblSelectedShapeName.setText("Heptagon");
+        lblSelectedShapeFormula.setText(sf.pentagon());
+        
+        variableNames.clear();
+        variableNames.add("Given side");
+        
+        textFieldsHandler();
+        clearAnswer();           
+    }//GEN-LAST:event_btnHeptagonActionPerformed
+
+    private void btnOctagonActionPerformed(java.awt.event.ActionEvent evt) {                                           
+        // TODO add your handling code here:
+        givenFields = 1;
+        
+        lblSelectedShapeName.setText("Octagon");
+        lblSelectedShapeFormula.setText(sf.pentagon());
+        
+        variableNames.clear();
+        variableNames.add("Given side");
+        
+        textFieldsHandler();
+        clearAnswer();           
+    }                                              
 
     private void btnCalculateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCalculateActionPerformed
         // TODO add your handling code here:
@@ -508,7 +632,88 @@ public class Main extends javax.swing.JFrame {
             } catch (NumberFormatException ex) {
                 lblAnswer.setText("Invalid radius. Please enter a number.");
             }
-        }
+        } else if ("Parallelogram".equals(lblSelectedShapeName.getText())) {
+            try {
+                double base = Double.parseDouble(textFields.get(0).getText());
+                double side = Double.parseDouble(textFields.get(1).getText());
+                double height = Double.parseDouble(textFields.get(2).getText());
+                
+                
+                double perimeter = 2 * (base + side);
+                double area = base * height;
+
+                lblAnswer.setText("<html>Perimeter = " + decimalFormat.format(perimeter) +
+                "<br>Area = " + decimalFormat.format(area) + "</html>");
+            } catch (NumberFormatException ex) {
+                lblAnswer.setText("Invalid radius. Please enter a number.");
+            } 
+        } else if ("Parallelogram".equals(lblSelectedShapeName.getText())) {
+            try {
+                double base = Double.parseDouble(textFields.get(0).getText());
+                double side = Double.parseDouble(textFields.get(1).getText());
+                double height = Double.parseDouble(textFields.get(2).getText());
+                
+                
+                double perimeter = 2 * (base + side);
+                double area = base * height;
+
+                lblAnswer.setText("<html>Perimeter = " + decimalFormat.format(perimeter) +
+                "<br>Area = " + decimalFormat.format(area) + "</html>");
+            } catch (NumberFormatException ex) {
+                lblAnswer.setText("Invalid radius. Please enter a number.");
+            } 
+        } else if ("Pentagon".equals(lblSelectedShapeName.getText())) {
+            try {
+                double side = Double.parseDouble(textFields.get(0).getText());
+                
+                double perimeter = 5 * side;
+                double area = (5 * Math.pow(side, 2)) / (4 * Math.tan(Math.PI/5));
+
+                lblAnswer.setText("<html>Perimeter = " + decimalFormat.format(perimeter) +
+                "<br>Area = " + decimalFormat.format(area) + "</html>");
+            } catch (NumberFormatException ex) {
+                lblAnswer.setText("Invalid radius. Please enter a number.");
+            } 
+        } else if ("Hexagon".equals(lblSelectedShapeName.getText())) {
+            try {
+                double side = Double.parseDouble(textFields.get(0).getText());
+                
+                
+                double perimeter = 6 * side;
+                double area = (3 * Math.sqrt(3) * Math.pow(side, 2) / 2);
+
+                lblAnswer.setText("<html>Perimeter = " + decimalFormat.format(perimeter) +
+                "<br>Area = " + decimalFormat.format(area) + "</html>");
+            } catch (NumberFormatException ex) {
+                lblAnswer.setText("Invalid radius. Please enter a number.");
+            } 
+        } else if ("Heptagon".equals(lblSelectedShapeName.getText())) {
+            try {
+                double side = Double.parseDouble(textFields.get(0).getText());
+                
+                
+                double perimeter = 7 * side;
+                double area = (7 * Math.pow(side, 2)) / (4 * Math.tan(Math.PI/7));
+
+                lblAnswer.setText("<html>Perimeter = " + decimalFormat.format(perimeter) +
+                "<br>Area = " + decimalFormat.format(area) + "</html>");
+            } catch (NumberFormatException ex) {
+                lblAnswer.setText("Invalid radius. Please enter a number.");
+            } 
+        } else if ("Octagon".equals(lblSelectedShapeName.getText())) {
+            try {
+                double side = Double.parseDouble(textFields.get(0).getText());
+                
+                
+                double perimeter = 8 * side;
+                double area = 2 * (1 + Math.sqrt(2)) * Math.pow(side, 2);
+
+                lblAnswer.setText("<html>Perimeter = " + decimalFormat.format(perimeter) +
+                "<br>Area = " + decimalFormat.format(area) + "</html>");
+            } catch (NumberFormatException ex) {
+                lblAnswer.setText("Invalid radius. Please enter a number.");
+            } 
+        } 
 
     }//GEN-LAST:event_btnCalculateActionPerformed
 
@@ -559,8 +764,12 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JButton btnCircle;
     private javax.swing.JButton btnClear;
     private javax.swing.JButton btnEllipse;
+    private javax.swing.JButton btnHeptagon;
+    private javax.swing.JButton btnHexagon;
+    private javax.swing.JButton btnOctagon;
+    private javax.swing.JButton btnParallelogram;
+    private javax.swing.JButton btnPentagon;
     private javax.swing.JButton btnRectangle;
-    private javax.swing.JButton btnRectangle1;
     private javax.swing.JButton btnSquare;
     private javax.swing.JButton btnTriangle;
     private javax.swing.JPanel jPanel3;
