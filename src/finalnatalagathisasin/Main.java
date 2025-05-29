@@ -640,16 +640,41 @@ public class Main extends javax.swing.JFrame {
         variableNames.add("Given side");
         
         textFieldsHandler();
-        clearAnswer();             
+        clearAnswer();
     }//GEN-LAST:event_btnDecagonActionPerformed
 
     private void btnRhombusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRhombusActionPerformed
         // TODO add your handling code here:
+        givenFields = 3;
         
+        lblSelectedShapeName.setText("Rhombus");
+        lblSelectedShapeFormula.setText(sf.rhombus());
+        
+        variableNames.clear();
+        variableNames.add("Given side");
+        variableNames.add("Diagonal p");
+        variableNames.add("Diagonal q");
+        
+        textFieldsHandler();
+        clearAnswer();
     }//GEN-LAST:event_btnRhombusActionPerformed
 
     private void btnTrapezoidActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTrapezoidActionPerformed
         // TODO add your handling code here:
+        givenFields = 5;
+        
+        lblSelectedShapeName.setText("Trapezoid");
+        lblSelectedShapeFormula.setText(sf.trapezoid());
+        
+        variableNames.clear();
+        variableNames.add("side a");
+        variableNames.add("side b");
+        variableNames.add("base c");
+        variableNames.add("base d");
+        variableNames.add("height");
+        
+        textFieldsHandler();
+        clearAnswer();        
     }//GEN-LAST:event_btnTrapezoidActionPerformed
 
 
@@ -864,6 +889,45 @@ public class Main extends javax.swing.JFrame {
             } 
         }
         
+        //Rhombus
+        
+        else if ("Rhombus".equals(lblSelectedShapeName.getText())) {
+            try {
+                double side = Double.parseDouble(textFields.get(0).getText());
+                double diagonalP = Double.parseDouble(textFields.get(1).getText());
+                double diagonalQ = Double.parseDouble(textFields.get(2).getText());
+                
+                
+                double perimeter = 4 * side;
+                double area = (diagonalP * diagonalQ) / 2;
+
+                lblAnswer.setText("<html>Perimeter = " + decimalFormat.format(perimeter) +
+                "<br>Area = " + decimalFormat.format(area) + "</html>");
+            } catch (NumberFormatException ex) {
+                lblAnswer.setText("Invalid radius. Please enter a number.");
+            } 
+        }
+        
+        //Trapezoid
+        
+        else if ("Trapezoid".equals(lblSelectedShapeName.getText())) {
+            try {
+                double sideA = Double.parseDouble(textFields.get(0).getText());
+                double sideB = Double.parseDouble(textFields.get(1).getText());
+                double baseC = Double.parseDouble(textFields.get(2).getText());
+                double baseD = Double.parseDouble(textFields.get(3).getText());
+                double height = Double.parseDouble(textFields.get(4).getText());
+                
+                
+                double perimeter = sideA + sideB + baseC + baseD;
+                double area = ((baseC + baseD) / 2 )* height;
+
+                lblAnswer.setText("<html>Perimeter = " + decimalFormat.format(perimeter) +
+                "<br>Area = " + decimalFormat.format(area) + "</html>");
+            } catch (NumberFormatException ex) {
+                lblAnswer.setText("Invalid radius. Please enter a number.");
+            } 
+        }        
         
 
     }//GEN-LAST:event_btnCalculateActionPerformed
